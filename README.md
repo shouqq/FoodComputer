@@ -178,13 +178,19 @@ Pins connections
 
 You can use the dashboard with the link below:
 
-[https://maggoty-seaurchin-3431.dataplicity.io/ui]https://maggoty-seaurchin-3431.dataplicity.io/ui)
+[https://maggoty-seaurchin-3431.dataplicity.io/ui](https://maggoty-seaurchin-3431.dataplicity.io/ui)
 ![dash](artwork/db1.png)
 
 
   ```diff
   - The dashboard is running on Raspberry Pi. 
   ```
+
+  ![db1](artwork/db1.png)
+  ![db2](artwork/db2.png)
+  ![db3](artwork/db3.png)
+  ![db4](artwork/db4.png)
+  ![db5](artwork/db5.png)
 
 
 ## Components Used
