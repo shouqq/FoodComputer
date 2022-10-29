@@ -1,0 +1,1795 @@
+[
+    {
+        "id": "8786e1a4aacd9089",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "64124f39e26db782",
+        "type": "inject",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "asdasd",
+        "payload": "asdasdasd",
+        "payloadType": "str",
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "4648f506f107747a",
+                "e2913da2146c0fc5"
+            ]
+        ]
+    },
+    {
+        "id": "2ee9ff12bcf1ee8c",
+        "type": "ui_text",
+        "z": "8786e1a4aacd9089",
+        "group": "f56b26dc83a9e07a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "About Food Computer",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 440,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "cf3838bc92f01734",
+        "type": "ui_gauge",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "group": "a3c760168553bbd6",
+        "order": 1,
+        "width": 9,
+        "height": 7,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 870,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b68580a13a6f49a5",
+        "type": "ui_gauge",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "group": "24d10db60fe906d3",
+        "order": 1,
+        "width": "9",
+        "height": "7",
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 880,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "5873f762273aec35",
+        "type": "ui_switch",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "Light Relay",
+        "tooltip": "",
+        "group": "d6132bbc4c1947c8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "c2fd0d11ce56848a"
+            ]
+        ]
+    },
+    {
+        "id": "bf93c8ada0ccb919",
+        "type": "ui_switch",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "Reserved Relay 3",
+        "tooltip": "",
+        "group": "d6132bbc4c1947c8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "bd4c76601379a936"
+            ]
+        ]
+    },
+    {
+        "id": "21f3d0703d30e09b",
+        "type": "ui_switch",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "Fan Relay",
+        "tooltip": "",
+        "group": "d6132bbc4c1947c8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "eb7bb4c4d6b4aeb0"
+            ]
+        ]
+    },
+    {
+        "id": "ed28c584.34a4a8",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "Set filename",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "/home/pi/foodComputer/images/grab.jpg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1020,
+        "wires": [
+            [
+                "10e842063c53e8bd"
+            ]
+        ]
+    },
+    {
+        "id": "6eba2f2f.5e0f",
+        "type": "template",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"1024px\" height=\"768px\" src=\"data:image/jpg;base64,{{{payload}}}\">",
+        "output": "str",
+        "x": 899.9999961853027,
+        "y": 817.2500019073486,
+        "wires": [
+            [
+                "dd3172bd.6a821"
+            ]
+        ]
+    },
+    {
+        "id": "dd3172bd.6a821",
+        "type": "ui_template",
+        "z": "8786e1a4aacd9089",
+        "group": "3c91e00b21b4f59d",
+        "name": "",
+        "order": 1,
+        "width": 19,
+        "height": 14,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1086,
+        "y": 830.7500009536743,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10e842063c53e8bd",
+        "type": "file in",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "filename": "/home/pi/foodComputer/images/image01.jpg",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "base64",
+        "allProps": false,
+        "x": 570,
+        "y": 940,
+        "wires": [
+            [
+                "6eba2f2f.5e0f"
+            ]
+        ]
+    },
+    {
+        "id": "3de57ccd7b644c4a",
+        "type": "delay",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 340,
+        "y": 840,
+        "wires": [
+            [
+                "fd045e2c1e5182f1",
+                "047a0674f584f68a"
+            ]
+        ]
+    },
+    {
+        "id": "0ff2233b10cf36dd",
+        "type": "inject",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "9",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 1080,
+        "wires": [
+            [
+                "d0accad46659dfd6"
+            ]
+        ]
+    },
+    {
+        "id": "d0accad46659dfd6",
+        "type": "ui_text",
+        "z": "8786e1a4aacd9089",
+        "group": "3c91e00b21b4f59d",
+        "order": 3,
+        "width": 19,
+        "height": 1,
+        "name": "",
+        "label": "Last Image at: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 440,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "c2fd0d11ce56848a",
+        "type": "rpi-gpio out",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "pin": "5",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2c12da7137119b78",
+        "type": "ui_switch",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "Reserved Relay 4",
+        "tooltip": "",
+        "group": "d6132bbc4c1947c8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "0ba2fd04f67872de"
+            ]
+        ]
+    },
+    {
+        "id": "bd4c76601379a936",
+        "type": "rpi-gpio out",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "pin": "6",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 520,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0ba2fd04f67872de",
+        "type": "rpi-gpio out",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "pin": "13",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 520,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "eb7bb4c4d6b4aeb0",
+        "type": "rpi-gpio out",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "pin": "19",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "554735eceeca90b5",
+        "type": "mqtt in",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "topic": "data/tempC",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a2aac01b87e658fe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "0785c513a220a24f",
+                "f9f293b9ed3dc00f"
+            ]
+        ]
+    },
+    {
+        "id": "0785c513a220a24f",
+        "type": "debug",
+        "z": "8786e1a4aacd9089",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "29c6000cd7e6f28e",
+        "type": "mqtt in",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "topic": "data/tempF",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a2aac01b87e658fe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 420,
+        "wires": [
+            [
+                "0785c513a220a24f",
+                "9179bc348eed2442",
+                "bfe306c03b48b3bd"
+            ]
+        ]
+    },
+    {
+        "id": "c2f230d547455ca6",
+        "type": "mqtt in",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "topic": "data/humid",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a2aac01b87e658fe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 400,
+        "y": 480,
+        "wires": [
+            [
+                "0785c513a220a24f",
+                "1c8f62dc2b6c6b01"
+            ]
+        ]
+    },
+    {
+        "id": "f36c3045bcedfabf",
+        "type": "ui_gauge",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "group": "a3c760168553bbd6",
+        "order": 2,
+        "width": 9,
+        "height": 7,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "F",
+        "format": "{{value}}",
+        "min": "50",
+        "max": "176",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1030,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f9f293b9ed3dc00f",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "function 1",
+        "func": "msg.payload=parseFloat(msg.payload).toFixed(2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 400,
+        "wires": [
+            [
+                "cf3838bc92f01734",
+                "88ef6ad558592195"
+            ]
+        ]
+    },
+    {
+        "id": "9179bc348eed2442",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "function 2",
+        "func": "msg.payload=parseFloat(msg.payload).toFixed(2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 460,
+        "wires": [
+            [
+                "f36c3045bcedfabf"
+            ]
+        ]
+    },
+    {
+        "id": "1c8f62dc2b6c6b01",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "function 3",
+        "func": "msg.payload=parseFloat(msg.payload).toFixed(2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 620,
+        "wires": [
+            [
+                "b68580a13a6f49a5",
+                "b68fe2e8b6608187"
+            ]
+        ]
+    },
+    {
+        "id": "88ef6ad558592195",
+        "type": "ui_chart",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "group": "a3c760168553bbd6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Temperature Graph",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "80",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1090,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b68fe2e8b6608187",
+        "type": "ui_chart",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "group": "24d10db60fe906d3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Humidity Graph",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 860,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "081c6431e7bf1503",
+        "type": "ui_template",
+        "z": "8786e1a4aacd9089",
+        "group": "f56b26dc83a9e07a",
+        "name": "",
+        "order": 1,
+        "width": "14",
+        "height": "11",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n\n<p>\nFood Computer is an automated computer-controlled garden to mimic an outdoor environment inside the food computer. Here\ncomes the role of sensors to provide an isolated virtual environment, knowing that the materials have been carefully\nselected to isolate the plant from the outside world, starting with the insulating material which is used to design the\nenclosure (Reflectix or any other insulator). The Raspberry Pi is our core/brain of the food computer and operates in\nthe open-source ecosystem: it runs Linux. The raspberry pi is connected to a fan that blows air into the food computer.\nThere are two fans, one is always on for circulation, and the other is thermostat controlled for exhaust ventilation. It\nis also connected to the temperature sensor that goes inside the food computer and depending on what we set the\ntemperature, the fan will turn on if it is too hot and off if it is also cold. We will attach a grow light at the top,\nraspberry pi controls the lights, depending on the type of plant we can say we want it to last for ten hours. Camera is\nconnected to the raspberry pi to take images of the plants and it will store it in a directory as jpg files. Plants grow\nusing hydroponics, so from the inside there is a basin that we fill with water and then we add some nutrients to the\nplants in it so that the plants can grow. We also have an air bubbler inside the hydroponics so that the root can get\noxygen so that it can survive. The reservoir is a bus tub with an air-pump and stone. Plants are started in rockwool and\nplaced into net pots in the reservoir lid. All chemistry (EC and pH) is done manually. An air pump is a crucial\ncomponent of this type of hydroponic system since plant roots are constantly in contact with the nutrient solution and\npowered by electricity. The dimensions of the Reflectix ST16025 Staple Tab Insulation Roll are 25.4 x 40.64 x 25.4 cm so\nthe plant container should be smaller than the enclosure size.\n\nWhen it comes to plants to grow in a hydroponic system, you can’t get much better than mint. Mint is well-suited for\nhydroponic growing and is, in fact, one of the first plants to be grown hydroponically in England in 1699. Mint can be\ngrown in multiple varieties in any hydroponic system. Hydroponic mint grows best at a temperature range from 60 to 70\ndegrees (F). Hydroponic mint can be fertilized with a foliage-based nutrient solution only since it isn’t required to\nflower to harvest for culinary use.\n</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 420,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9761f2c152d7b0e2",
+        "type": "ui_text_input",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "From(N)",
+        "tooltip": "at night from F",
+        "group": "26f191932cc4b7f0",
+        "order": 4,
+        "width": 7,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1000,
+        "y": 1160,
+        "wires": [
+            [
+                "2ede45c4047729f8"
+            ]
+        ]
+    },
+    {
+        "id": "60a036964f211b4c",
+        "type": "ui_text_input",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "To(N)",
+        "tooltip": "at night to F",
+        "group": "26f191932cc4b7f0",
+        "order": 5,
+        "width": 7,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1030,
+        "y": 1200,
+        "wires": [
+            [
+                "ce798de19ecd43e5"
+            ]
+        ]
+    },
+    {
+        "id": "4464866948d49172",
+        "type": "ui_text",
+        "z": "8786e1a4aacd9089",
+        "group": "26f191932cc4b7f0",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Temperature at Night F",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1100,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "0c03d83db75c363c",
+        "type": "ui_text_input",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "From",
+        "tooltip": "",
+        "group": "26f191932cc4b7f0",
+        "order": 10,
+        "width": 7,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1570,
+        "y": 1260,
+        "wires": [
+            [
+                "a43afb1125a4e951"
+            ]
+        ]
+    },
+    {
+        "id": "4137abd3050a3825",
+        "type": "ui_text_input",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "To",
+        "tooltip": "",
+        "group": "26f191932cc4b7f0",
+        "order": 11,
+        "width": 7,
+        "height": 1,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1590,
+        "y": 1300,
+        "wires": [
+            [
+                "34da0e26c66885fa"
+            ]
+        ]
+    },
+    {
+        "id": "7b7db3042503364a",
+        "type": "nighttime",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "lon": "25.3548",
+        "lat": "51.1839",
+        "start": "sunriseEnd",
+        "end": "sunsetStart",
+        "x": 800,
+        "y": 1280,
+        "wires": [
+            [
+                "5ea5a8e0e2fb9eb1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ad90514abd931d75",
+        "type": "debug",
+        "z": "8786e1a4aacd9089",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "be42acf70a68df14",
+        "type": "inject",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 1380,
+        "wires": [
+            [
+                "8056057f1c6bb6ae"
+            ]
+        ]
+    },
+    {
+        "id": "8056057f1c6bb6ae",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "function 4",
+        "func": "//var n = flow.get(\"isNight\");\nvar n = String(flow.get(\"isNight\"))+String(\",\")+String(flow.get(\"updatePicInterval\"));\nmsg.payload=n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1380,
+        "wires": [
+            [
+                "ad90514abd931d75"
+            ]
+        ]
+    },
+    {
+        "id": "5ea5a8e0e2fb9eb1",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "isNight",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "842a2264bbc98454",
+        "type": "ui_text_input",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "Update picture after every (Seconds)",
+        "tooltip": "",
+        "group": "e6b2e0d97b36e59b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 950,
+        "y": 1540,
+        "wires": [
+            [
+                "645ff1ba306038dd"
+            ]
+        ]
+    },
+    {
+        "id": "01d569d70de94ac1",
+        "type": "ui_text_input",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "label": "Save picture to file after every (Seconds)",
+        "tooltip": "",
+        "group": "e6b2e0d97b36e59b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 960,
+        "y": 1580,
+        "wires": [
+            [
+                "bc4ce4557922ed04"
+            ]
+        ]
+    },
+    {
+        "id": "2ede45c4047729f8",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fromNightF",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce798de19ecd43e5",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "toNightF",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b01d357693969dc",
+        "type": "ui_text",
+        "z": "8786e1a4aacd9089",
+        "group": "26f191932cc4b7f0",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Temperature at Day F",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1360,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "a43afb1125a4e951",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fromDayF",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1730,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34da0e26c66885fa",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "toDayF",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1740,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "645ff1ba306038dd",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "updatePicInterval",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 1540,
+        "wires": [
+            [
+                "2137d537fb13fd4b"
+            ]
+        ]
+    },
+    {
+        "id": "bc4ce4557922ed04",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "savePictureInterval",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 1580,
+        "wires": [
+            [
+                "b372eb876cbd87c1"
+            ]
+        ]
+    },
+    {
+        "id": "f2f546d134125438",
+        "type": "trigger",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-250",
+        "extend": false,
+        "overrideDelay": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 630,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bfe306c03b48b3bd",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "controlTemp",
+        "func": "var temp=parseFloat(msg.payload);\nvar fromNight = flow.get(\"fromNightF\");\nvar toNight = flow.get(\"toNightF\");\nvar fromDay = flow.get(\"fromDayF\");\nvar toDay = flow.get(\"toDayF\");\n\nif (typeof fromNight == 'undefined') {\n    fromNight = 50.0;\n}\nif (typeof toNight == 'undefined') {\n    fromNight = 55.0;\n}\nif (typeof fromDay == 'undefined') {\n    fromDay = 65.0;\n}\nif (typeof toDay == 'undefined') {\n    toDay = 70.0;\n}\nif (flow.get(\"isNight\")){\n\n    if(temp<fromNight){\n        msg.payload=\"light\"\n        return msg;\n    }\n    if (temp > toNight) {\n        msg.payload = \"fan\"\n        return msg;\n    }\n\n}\nelse{\n    if (temp < fromDay) {\n        msg.payload = \"light\"\n        return msg;\n    }\n    if (temp > toDay) {\n        msg.payload = \"fan\"\n        return msg;\n    }\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 520,
+        "wires": [
+            [
+                "f0fd84607458b3e9",
+                "a9409dd6d5b2412f"
+            ]
+        ]
+    },
+    {
+        "id": "f0fd84607458b3e9",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "lightHandle",
+        "func": "var m=msg.payload;\nif(m==\"light\"){\n    msg.payload=1;\n    return msg;\n    \n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "5873f762273aec35",
+                "764ded813a331e9e"
+            ]
+        ]
+    },
+    {
+        "id": "a9409dd6d5b2412f",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "fanHandle",
+        "func": "var m=msg.payload;\nif(m==\"fan\"){\n    msg.payload=1;\n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "21f3d0703d30e09b",
+                "95e3253323484a6a"
+            ]
+        ]
+    },
+    {
+        "id": "95e3253323484a6a",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 300,
+        "wires": [
+            [
+                "5873f762273aec35"
+            ]
+        ]
+    },
+    {
+        "id": "764ded813a331e9e",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "21f3d0703d30e09b"
+            ]
+        ]
+    },
+    {
+        "id": "fd045e2c1e5182f1",
+        "type": "usbcamera",
+        "z": "8786e1a4aacd9089",
+        "filemode": "1",
+        "filename": "image01.jpg",
+        "filedefpath": "0",
+        "filepath": "/home/pi/foodComputer/images",
+        "fileformat": "jpeg",
+        "resolution": "4",
+        "name": "USBCam",
+        "x": 220,
+        "y": 920,
+        "wires": [
+            [
+                "ed28c584.34a4a8"
+            ]
+        ]
+    },
+    {
+        "id": "047a0674f584f68a",
+        "type": "debug",
+        "z": "8786e1a4aacd9089",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "4648f506f107747a",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "updatePicInterval",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 760,
+        "wires": [
+            [
+                "3de57ccd7b644c4a"
+            ]
+        ]
+    },
+    {
+        "id": "38c69d7a18dcbe61",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "function 5",
+        "func": "//var n = flow.get(\"isNight\");\nvar n = flow.get(\"updatePicInterval\");\nif (typeof n !== 'undefined'){\nmsg.delay=n;\n    return msg;\n}\nelse{\n    msg.delay=3;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 364,
+        "y": 667,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6152fe975f97ea17",
+        "type": "exec",
+        "z": "8786e1a4aacd9089",
+        "command": "cp /home/pi/foodComputer/images/image01.jpg /home/pi/foodComputer/images/image_$(date +\"%Y-%m-%d_%H%M\").jpg",
+        "addpay": "extra",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "CP",
+        "x": 710,
+        "y": 840,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e2913da2146c0fc5",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "savePictureInterval",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 900,
+        "wires": [
+            [
+                "0e24448e3a8e5749"
+            ]
+        ]
+    },
+    {
+        "id": "0e24448e3a8e5749",
+        "type": "delay",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 580,
+        "y": 840,
+        "wires": [
+            [
+                "6152fe975f97ea17"
+            ]
+        ]
+    },
+    {
+        "id": "2137d537fb13fd4b",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "function 6",
+        "func": "//var n = flow.get(\"isNight\");\nvar n = flow.get(\"updatePicInterval\");\nmsg.payload=n*1000;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 1540,
+        "wires": [
+            [
+                "e0d76078d6513681"
+            ]
+        ]
+    },
+    {
+        "id": "b372eb876cbd87c1",
+        "type": "function",
+        "z": "8786e1a4aacd9089",
+        "name": "function 7",
+        "func": "//var n = flow.get(\"isNight\");\nvar n = flow.get(\"savePictureInterval\");\nmsg.payload=n*1000;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 1580,
+        "wires": [
+            [
+                "bad10a18b4b94851"
+            ]
+        ]
+    },
+    {
+        "id": "e0d76078d6513681",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "updatePicInterval",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1710,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bad10a18b4b94851",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "savePictureInterval",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e7ae94be986664a",
+        "type": "ui_spacer",
+        "z": "8786e1a4aacd9089",
+        "name": "spacer",
+        "group": "3c91e00b21b4f59d",
+        "order": 2,
+        "width": 19,
+        "height": 1
+    },
+    {
+        "id": "400a036a704d2220",
+        "type": "ui_spacer",
+        "z": "8786e1a4aacd9089",
+        "name": "spacer",
+        "group": "26f191932cc4b7f0",
+        "order": 1,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "4da2f40edd1f944c",
+        "type": "ui_spacer",
+        "z": "8786e1a4aacd9089",
+        "name": "spacer",
+        "group": "26f191932cc4b7f0",
+        "order": 3,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "c3cb84e7c5fdcebc",
+        "type": "ui_spacer",
+        "z": "8786e1a4aacd9089",
+        "name": "spacer",
+        "group": "26f191932cc4b7f0",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "3f60e4a0bbf282d0",
+        "type": "ui_spacer",
+        "z": "8786e1a4aacd9089",
+        "name": "spacer",
+        "group": "26f191932cc4b7f0",
+        "order": 7,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "3b739b0427f50862",
+        "type": "ui_spacer",
+        "z": "8786e1a4aacd9089",
+        "name": "spacer",
+        "group": "26f191932cc4b7f0",
+        "order": 9,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "078becd7cc47576c",
+        "type": "ui_spacer",
+        "z": "8786e1a4aacd9089",
+        "name": "spacer",
+        "group": "26f191932cc4b7f0",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f56b26dc83a9e07a",
+        "type": "ui_group",
+        "name": "About The Project",
+        "tab": "57c73ddf51864868",
+        "order": 1,
+        "disp": true,
+        "width": 15,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a3c760168553bbd6",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "d105387b4c4eccf6",
+        "order": 1,
+        "disp": true,
+        "width": 18,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "24d10db60fe906d3",
+        "type": "ui_group",
+        "name": "Humidity",
+        "tab": "800e538018997701",
+        "order": 1,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d6132bbc4c1947c8",
+        "type": "ui_group",
+        "name": "Relays Controller",
+        "tab": "efa24ae064084aa8",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3c91e00b21b4f59d",
+        "type": "ui_group",
+        "name": "Camera",
+        "tab": "efa24ae064084aa8",
+        "order": 2,
+        "disp": true,
+        "width": "19",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a2aac01b87e658fe",
+        "type": "mqtt-broker",
+        "name": "broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "26f191932cc4b7f0",
+        "type": "ui_group",
+        "name": "Growth",
+        "tab": "da66f486e7207e33",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e6b2e0d97b36e59b",
+        "type": "ui_group",
+        "name": "Camera",
+        "tab": "da66f486e7207e33",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "57c73ddf51864868",
+        "type": "ui_tab",
+        "name": "About",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d105387b4c4eccf6",
+        "type": "ui_tab",
+        "name": "Temperature",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "800e538018997701",
+        "type": "ui_tab",
+        "name": "Humidity",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "efa24ae064084aa8",
+        "type": "ui_tab",
+        "name": "Food Computer",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "da66f486e7207e33",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]
