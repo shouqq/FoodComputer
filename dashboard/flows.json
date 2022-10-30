@@ -28,8 +28,8 @@
         "topic": "asdasd",
         "payload": "asdasdasd",
         "payloadType": "str",
-        "x": 120,
-        "y": 660,
+        "x": 240,
+        "y": 680,
         "wires": [
             [
                 "4648f506f107747a",
@@ -50,8 +50,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 440,
-        "y": 1180,
+        "x": 560,
+        "y": 1200,
         "wires": []
     },
     {
@@ -77,8 +77,8 @@
         "seg1": "",
         "seg2": "",
         "className": "",
-        "x": 870,
-        "y": 420,
+        "x": 990,
+        "y": 440,
         "wires": []
     },
     {
@@ -104,8 +104,8 @@
         "seg1": "",
         "seg2": "",
         "className": "",
-        "x": 880,
-        "y": 660,
+        "x": 1000,
+        "y": 680,
         "wires": []
     },
     {
@@ -134,8 +134,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 330,
-        "y": 80,
+        "x": 450,
+        "y": 100,
         "wires": [
             [
                 "c2fd0d11ce56848a"
@@ -168,8 +168,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 330,
-        "y": 140,
+        "x": 450,
+        "y": 160,
         "wires": [
             [
                 "bd4c76601379a936"
@@ -202,8 +202,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 370,
-        "y": 260,
+        "x": 490,
+        "y": 280,
         "wires": [
             [
                 "eb7bb4c4d6b4aeb0"
@@ -229,8 +229,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 1020,
+        "x": 450,
+        "y": 1040,
         "wires": [
             [
                 "10e842063c53e8bd"
@@ -248,8 +248,8 @@
         "syntax": "mustache",
         "template": "<img width=\"1024px\" height=\"768px\" src=\"data:image/jpg;base64,{{{payload}}}\">",
         "output": "str",
-        "x": 899.9999961853027,
-        "y": 817.2500019073486,
+        "x": 1019.9999961853027,
+        "y": 837.2500019073486,
         "wires": [
             [
                 "dd3172bd.6a821"
@@ -271,8 +271,8 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 1086,
-        "y": 830.7500009536743,
+        "x": 1206,
+        "y": 850.7500009536743,
         "wires": [
             []
         ]
@@ -289,8 +289,8 @@
         "sendError": false,
         "encoding": "base64",
         "allProps": false,
-        "x": 570,
-        "y": 940,
+        "x": 690,
+        "y": 960,
         "wires": [
             [
                 "6eba2f2f.5e0f"
@@ -314,8 +314,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 340,
-        "y": 840,
+        "x": 460,
+        "y": 860,
         "wires": [
             [
                 "fd045e2c1e5182f1",
@@ -344,8 +344,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 230,
-        "y": 1080,
+        "x": 350,
+        "y": 1100,
         "wires": [
             [
                 "d0accad46659dfd6"
@@ -365,8 +365,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 440,
-        "y": 1080,
+        "x": 560,
+        "y": 1100,
         "wires": []
     },
     {
@@ -380,8 +380,8 @@
         "freq": "",
         "out": "out",
         "bcm": true,
-        "x": 520,
-        "y": 80,
+        "x": 640,
+        "y": 100,
         "wires": []
     },
     {
@@ -410,8 +410,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 330,
-        "y": 200,
+        "x": 450,
+        "y": 220,
         "wires": [
             [
                 "0ba2fd04f67872de"
@@ -429,8 +429,8 @@
         "freq": "",
         "out": "out",
         "bcm": true,
-        "x": 520,
-        "y": 140,
+        "x": 640,
+        "y": 160,
         "wires": []
     },
     {
@@ -444,8 +444,8 @@
         "freq": "",
         "out": "out",
         "bcm": true,
-        "x": 520,
-        "y": 200,
+        "x": 640,
+        "y": 220,
         "wires": []
     },
     {
@@ -459,8 +459,8 @@
         "freq": "",
         "out": "out",
         "bcm": true,
-        "x": 540,
-        "y": 260,
+        "x": 660,
+        "y": 280,
         "wires": []
     },
     {
@@ -476,8 +476,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 410,
-        "y": 360,
+        "x": 530,
+        "y": 380,
         "wires": [
             [
                 "0785c513a220a24f",
@@ -497,8 +497,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 360,
+        "x": 840,
+        "y": 380,
         "wires": []
     },
     {
@@ -514,8 +514,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 90,
-        "y": 420,
+        "x": 210,
+        "y": 440,
         "wires": [
             [
                 "0785c513a220a24f",
@@ -537,8 +537,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 400,
-        "y": 480,
+        "x": 520,
+        "y": 500,
         "wires": [
             [
                 "0785c513a220a24f",
@@ -569,8 +569,8 @@
         "seg1": "",
         "seg2": "",
         "className": "",
-        "x": 1030,
-        "y": 480,
+        "x": 1150,
+        "y": 500,
         "wires": []
     },
     {
@@ -584,8 +584,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 400,
+        "x": 800,
+        "y": 420,
         "wires": [
             [
                 "cf3838bc92f01734",
@@ -604,8 +604,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 460,
+        "x": 800,
+        "y": 480,
         "wires": [
             [
                 "f36c3045bcedfabf"
@@ -623,8 +623,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 620,
+        "x": 760,
+        "y": 640,
         "wires": [
             [
                 "b68580a13a6f49a5",
@@ -670,8 +670,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1090,
-        "y": 400,
+        "x": 1210,
+        "y": 420,
         "wires": [
             []
         ]
@@ -714,8 +714,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 860,
-        "y": 600,
+        "x": 980,
+        "y": 620,
         "wires": [
             []
         ]
@@ -735,8 +735,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 420,
-        "y": 1220,
+        "x": 540,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -759,8 +759,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 1000,
-        "y": 1160,
+        "x": 1120,
+        "y": 1180,
         "wires": [
             [
                 "2ede45c4047729f8"
@@ -785,8 +785,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1030,
-        "y": 1200,
+        "x": 1150,
+        "y": 1220,
         "wires": [
             [
                 "ce798de19ecd43e5"
@@ -806,8 +806,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1100,
-        "y": 1060,
+        "x": 1220,
+        "y": 1080,
         "wires": []
     },
     {
@@ -828,8 +828,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1570,
-        "y": 1260,
+        "x": 1690,
+        "y": 1280,
         "wires": [
             [
                 "a43afb1125a4e951"
@@ -854,30 +854,12 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1590,
-        "y": 1300,
+        "x": 1710,
+        "y": 1320,
         "wires": [
             [
                 "34da0e26c66885fa"
             ]
-        ]
-    },
-    {
-        "id": "7b7db3042503364a",
-        "type": "nighttime",
-        "z": "8786e1a4aacd9089",
-        "name": "",
-        "lon": "25.3548",
-        "lat": "51.1839",
-        "start": "sunriseEnd",
-        "end": "sunsetStart",
-        "x": 800,
-        "y": 1280,
-        "wires": [
-            [
-                "5ea5a8e0e2fb9eb1"
-            ],
-            []
         ]
     },
     {
@@ -892,8 +874,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 1380,
+        "x": 1220,
+        "y": 1400,
         "wires": []
     },
     {
@@ -917,8 +899,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 800,
-        "y": 1380,
+        "x": 920,
+        "y": 1400,
         "wires": [
             [
                 "8056057f1c6bb6ae"
@@ -936,37 +918,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 1380,
+        "x": 1080,
+        "y": 1400,
         "wires": [
             [
                 "ad90514abd931d75"
             ]
-        ]
-    },
-    {
-        "id": "5ea5a8e0e2fb9eb1",
-        "type": "change",
-        "z": "8786e1a4aacd9089",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "isNight",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1000,
-        "y": 1280,
-        "wires": [
-            []
         ]
     },
     {
@@ -987,8 +944,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 950,
-        "y": 1540,
+        "x": 1070,
+        "y": 1560,
         "wires": [
             [
                 "645ff1ba306038dd"
@@ -1013,8 +970,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 960,
-        "y": 1580,
+        "x": 1080,
+        "y": 1600,
         "wires": [
             [
                 "bc4ce4557922ed04"
@@ -1040,8 +997,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
-        "y": 1140,
+        "x": 1290,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -1065,8 +1022,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1200,
-        "y": 1220,
+        "x": 1320,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -1084,8 +1041,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1360,
-        "y": 1040,
+        "x": 1480,
+        "y": 1060,
         "wires": []
     },
     {
@@ -1107,8 +1064,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1730,
-        "y": 1260,
+        "x": 1850,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -1132,8 +1089,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1740,
-        "y": 1300,
+        "x": 1860,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -1157,8 +1114,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1270,
-        "y": 1540,
+        "x": 1390,
+        "y": 1560,
         "wires": [
             [
                 "2137d537fb13fd4b"
@@ -1184,8 +1141,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1280,
-        "y": 1580,
+        "x": 1400,
+        "y": 1600,
         "wires": [
             [
                 "b372eb876cbd87c1"
@@ -1209,8 +1166,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 630,
-        "y": 740,
+        "x": 750,
+        "y": 760,
         "wires": [
             []
         ]
@@ -1220,17 +1177,16 @@
         "type": "function",
         "z": "8786e1a4aacd9089",
         "name": "controlTemp",
-        "func": "var temp=parseFloat(msg.payload);\nvar fromNight = flow.get(\"fromNightF\");\nvar toNight = flow.get(\"toNightF\");\nvar fromDay = flow.get(\"fromDayF\");\nvar toDay = flow.get(\"toDayF\");\n\nif (typeof fromNight == 'undefined') {\n    fromNight = 50.0;\n}\nif (typeof toNight == 'undefined') {\n    fromNight = 55.0;\n}\nif (typeof fromDay == 'undefined') {\n    fromDay = 65.0;\n}\nif (typeof toDay == 'undefined') {\n    toDay = 70.0;\n}\nif (flow.get(\"isNight\")){\n\n    if(temp<fromNight){\n        msg.payload=\"light\"\n        return msg;\n    }\n    if (temp > toNight) {\n        msg.payload = \"fan\"\n        return msg;\n    }\n\n}\nelse{\n    if (temp < fromDay) {\n        msg.payload = \"light\"\n        return msg;\n    }\n    if (temp > toDay) {\n        msg.payload = \"fan\"\n        return msg;\n    }\n}\n\n",
+        "func": "var temp=parseFloat(msg.payload);\nvar fromNight = flow.get(\"fromNightF\");\nvar toNight = flow.get(\"toNightF\");\nvar fromDay = flow.get(\"fromDayF\");\nvar toDay = flow.get(\"toDayF\");\n\nif (typeof fromNight == 'undefined') {\n    fromNight = 50.0;\n}\nif (typeof toNight == 'undefined') {\n    fromNight = 55.0;\n}\nif (typeof fromDay == 'undefined') {\n    fromDay = 65.0;\n}\nif (typeof toDay == 'undefined') {\n    toDay = 70.0;\n}\nif (flow.get(\"isNight\")){\n\n    if(temp<fromNight){\n        msg.payload=\"fanOff\"\n        return msg;\n    }\n    if (temp > toNight) {\n        msg.payload = \"fanOn\"\n        return msg;\n    }\n\n}\nelse{\n    if (temp < fromDay) {\n        msg.payload = \"fanOff\"\n        return msg;\n    }\n    if (temp > toDay) {\n        msg.payload = \"fanOn\"\n        return msg;\n    }\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 230,
-        "y": 520,
+        "x": 350,
+        "y": 540,
         "wires": [
             [
-                "f0fd84607458b3e9",
                 "a9409dd6d5b2412f"
             ]
         ]
@@ -1240,18 +1196,17 @@
         "type": "function",
         "z": "8786e1a4aacd9089",
         "name": "lightHandle",
-        "func": "var m=msg.payload;\nif(m==\"light\"){\n    msg.payload=1;\n    return msg;\n    \n}\n",
+        "func": "\nvar isNight = flow.get(\"isNight\");\nif(isNight){\n    msg.payload=0;\n    return msg;\n    \n}\nelse{\n    msg.payload = 1;\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 110,
-        "y": 80,
+        "x": 370,
+        "y": 40,
         "wires": [
             [
-                "5873f762273aec35",
-                "764ded813a331e9e"
+                "5873f762273aec35"
             ]
         ]
     },
@@ -1260,73 +1215,14 @@
         "type": "function",
         "z": "8786e1a4aacd9089",
         "name": "fanHandle",
-        "func": "var m=msg.payload;\nif(m==\"fan\"){\n    msg.payload=1;\n    return msg\n}\n",
+        "func": "var m=msg.payload;\nif(m==\"fanOn\"){\n    msg.payload=1;\n    return msg\n}\nelse{\n    msg.payload = 0;\n    return msg\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 110,
-        "y": 260,
-        "wires": [
-            [
-                "21f3d0703d30e09b",
-                "95e3253323484a6a"
-            ]
-        ]
-    },
-    {
-        "id": "95e3253323484a6a",
-        "type": "change",
-        "z": "8786e1a4aacd9089",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "1",
-                "fromt": "num",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 300,
-        "y": 300,
-        "wires": [
-            [
-                "5873f762273aec35"
-            ]
-        ]
-    },
-    {
-        "id": "764ded813a331e9e",
-        "type": "change",
-        "z": "8786e1a4aacd9089",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "1",
-                "fromt": "num",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 140,
-        "y": 120,
+        "x": 230,
+        "y": 280,
         "wires": [
             [
                 "21f3d0703d30e09b"
@@ -1344,8 +1240,8 @@
         "fileformat": "jpeg",
         "resolution": "4",
         "name": "USBCam",
-        "x": 220,
-        "y": 920,
+        "x": 340,
+        "y": 940,
         "wires": [
             [
                 "ed28c584.34a4a8"
@@ -1357,7 +1253,7 @@
         "type": "debug",
         "z": "8786e1a4aacd9089",
         "name": "debug 3",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1365,8 +1261,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 780,
+        "x": 580,
+        "y": 800,
         "wires": []
     },
     {
@@ -1388,29 +1284,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 240,
-        "y": 760,
+        "x": 360,
+        "y": 780,
         "wires": [
             [
                 "3de57ccd7b644c4a"
             ]
-        ]
-    },
-    {
-        "id": "38c69d7a18dcbe61",
-        "type": "function",
-        "z": "8786e1a4aacd9089",
-        "name": "function 5",
-        "func": "//var n = flow.get(\"isNight\");\nvar n = flow.get(\"updatePicInterval\");\nif (typeof n !== 'undefined'){\nmsg.delay=n;\n    return msg;\n}\nelse{\n    msg.delay=3;\n    return msg;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 364,
-        "y": 667,
-        "wires": [
-            []
         ]
     },
     {
@@ -1425,8 +1304,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "CP",
-        "x": 710,
-        "y": 840,
+        "x": 830,
+        "y": 860,
         "wires": [
             [],
             [],
@@ -1452,8 +1331,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 900,
+        "x": 560,
+        "y": 920,
         "wires": [
             [
                 "0e24448e3a8e5749"
@@ -1466,7 +1345,7 @@
         "z": "8786e1a4aacd9089",
         "name": "",
         "pauseType": "delayv",
-        "timeout": "3",
+        "timeout": "1000",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -1477,8 +1356,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 580,
-        "y": 840,
+        "x": 700,
+        "y": 860,
         "wires": [
             [
                 "6152fe975f97ea17"
@@ -1496,8 +1375,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
-        "y": 1540,
+        "x": 1600,
+        "y": 1560,
         "wires": [
             [
                 "e0d76078d6513681"
@@ -1515,8 +1394,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
-        "y": 1580,
+        "x": 1600,
+        "y": 1600,
         "wires": [
             [
                 "bad10a18b4b94851"
@@ -1542,8 +1421,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1710,
-        "y": 1540,
+        "x": 1830,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -1567,8 +1446,52 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1700,
-        "y": 1580,
+        "x": 1820,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b7db3042503364a",
+        "type": "nighttime",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "lon": "25.3548",
+        "lat": "51.1839",
+        "start": "sunrise",
+        "end": "sunsetStart",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "5ea5a8e0e2fb9eb1",
+                "f0fd84607458b3e9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5ea5a8e0e2fb9eb1",
+        "type": "change",
+        "z": "8786e1a4aacd9089",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "isNight",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 200,
         "wires": [
             []
         ]
