@@ -141,6 +141,8 @@ This program make use of MQTT to communicate with the webapp.
 
 ## 🔌 Circuit Diagram <a name = "circuit"></a>
 
+![GPIOsRPi](Circuit/Circuit.png)
+
 
 * RPi 3,4 GPIOs Pinout
 
