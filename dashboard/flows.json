@@ -124,11 +124,11 @@
         "topic": "payload",
         "topicType": "msg",
         "style": "",
-        "onvalue": "1",
+        "onvalue": "0",
         "onvalueType": "num",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "0",
+        "offvalue": "1",
         "offvalueType": "num",
         "officon": "",
         "offcolor": "",
@@ -147,10 +147,10 @@
         "type": "ui_switch",
         "z": "8786e1a4aacd9089",
         "name": "",
-        "label": "Reserved Relay 3",
+        "label": "Fan 2 Relay",
         "tooltip": "",
         "group": "d6132bbc4c1947c8",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -168,8 +168,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 450,
-        "y": 160,
+        "x": 490,
+        "y": 200,
         "wires": [
             [
                 "bd4c76601379a936"
@@ -181,10 +181,10 @@
         "type": "ui_switch",
         "z": "8786e1a4aacd9089",
         "name": "",
-        "label": "Fan Relay",
+        "label": "Fan 1 Relay",
         "tooltip": "",
         "group": "d6132bbc4c1947c8",
-        "order": 4,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -374,7 +374,7 @@
         "type": "rpi-gpio out",
         "z": "8786e1a4aacd9089",
         "name": "",
-        "pin": "5",
+        "pin": "19",
         "set": "",
         "level": "0",
         "freq": "",
@@ -389,10 +389,10 @@
         "type": "ui_switch",
         "z": "8786e1a4aacd9089",
         "name": "",
-        "label": "Reserved Relay 4",
+        "label": "Reserved Relay",
         "tooltip": "",
         "group": "d6132bbc4c1947c8",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -410,8 +410,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 450,
-        "y": 220,
+        "x": 880,
+        "y": 140,
         "wires": [
             [
                 "0ba2fd04f67872de"
@@ -429,8 +429,8 @@
         "freq": "",
         "out": "out",
         "bcm": true,
-        "x": 640,
-        "y": 160,
+        "x": 700,
+        "y": 200,
         "wires": []
     },
     {
@@ -444,8 +444,8 @@
         "freq": "",
         "out": "out",
         "bcm": true,
-        "x": 640,
-        "y": 220,
+        "x": 1080,
+        "y": 140,
         "wires": []
     },
     {
@@ -453,7 +453,7 @@
         "type": "rpi-gpio out",
         "z": "8786e1a4aacd9089",
         "name": "",
-        "pin": "19",
+        "pin": "5",
         "set": "",
         "level": "0",
         "freq": "",
@@ -1196,14 +1196,14 @@
         "type": "function",
         "z": "8786e1a4aacd9089",
         "name": "lightHandle",
-        "func": "\nvar isNight = flow.get(\"isNight\");\nif(isNight){\n    msg.payload=0;\n    return msg;\n    \n}\nelse{\n    msg.payload = 1;\n    return msg;\n}",
+        "func": "\nvar isNight = flow.get(\"isNight\");\nif(isNight==true){\n    msg.payload=1;\n    return msg;\n    \n}\nelse{\n    msg.payload = 0;\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 40,
+        "x": 270,
+        "y": 20,
         "wires": [
             [
                 "5873f762273aec35"
@@ -1466,7 +1466,8 @@
         "wires": [
             [
                 "5ea5a8e0e2fb9eb1",
-                "f0fd84607458b3e9"
+                "f0fd84607458b3e9",
+                "6ad3c0423b42d5c1"
             ],
             []
         ]
@@ -1497,14 +1498,20 @@
         ]
     },
     {
-        "id": "2e7ae94be986664a",
-        "type": "ui_spacer",
+        "id": "6ad3c0423b42d5c1",
+        "type": "debug",
         "z": "8786e1a4aacd9089",
-        "name": "spacer",
-        "group": "3c91e00b21b4f59d",
-        "order": 2,
-        "width": 19,
-        "height": 1
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 140,
+        "wires": []
     },
     {
         "id": "400a036a704d2220",
@@ -1564,6 +1571,16 @@
         "group": "26f191932cc4b7f0",
         "order": 12,
         "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c729ac8c0a696686",
+        "type": "ui_spacer",
+        "z": "8786e1a4aacd9089",
+        "name": "spacer",
+        "group": "3c91e00b21b4f59d",
+        "order": 2,
+        "width": 19,
         "height": 1
     },
     {
