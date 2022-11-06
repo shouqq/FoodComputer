@@ -160,10 +160,10 @@ Pins connections
 
 | Si7021 | Raspberry Pi |
 | :--- | :--- |
-| `SDA` | `3` | 
+| `SDA` | `2` | 
 | `GND` | `GND` |
 | `3V3` | `3V3` | 
-| `SCL` | `5` | 
+| `SCL` | `3` | 
 
 | Relay Pins | Raspberry Pi |
 | :--- | :--- |
