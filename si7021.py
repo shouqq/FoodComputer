@@ -1,6 +1,6 @@
 import smbus
 import time
-
+## Get si7021 data over I2C
 def getData():
     # Get I2C bus
     bus = smbus.SMBus(1)

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>si7021.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>si7021.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">smbus</span>
+<span class="kn">import</span> <span class="nn">time</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span> <span class="nf">getData</span><span class="p">():</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      <p>Get I2C bus</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="n">bus</span> <span class="o">=</span> <span class="n">smbus</span><span class="o">.</span><span class="n">SMBus</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">bus</span><span class="o">.</span><span class="n">write_byte</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="mh">0xF5</span><span class="p">)</span>
+    
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      <p>SI7021 address, 0x40  Read 2 bytes, Humidity</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="n">data0</span> <span class="o">=</span> <span class="n">bus</span><span class="o">.</span><span class="n">read_byte</span><span class="p">(</span><span class="mh">0x40</span><span class="p">)</span>
+    <span class="n">data1</span> <span class="o">=</span> <span class="n">bus</span><span class="o">.</span><span class="n">read_byte</span><span class="p">(</span><span class="mh">0x40</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      <p>Convert the data</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="n">humidity</span> <span class="o">=</span> <span class="p">((</span><span class="n">data0</span> <span class="o">*</span> <span class="mi">256</span> <span class="o">+</span> <span class="n">data1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">125</span> <span class="o">/</span> <span class="mf">65536.0</span><span class="p">)</span> <span class="o">-</span> <span class="mi">6</span>
+    
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">bus</span><span class="o">.</span><span class="n">write_byte</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="mh">0xF3</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      <p>SI7021 address, 0x40 Read data 2 bytes, Temperature</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="n">data0</span> <span class="o">=</span> <span class="n">bus</span><span class="o">.</span><span class="n">read_byte</span><span class="p">(</span><span class="mh">0x40</span><span class="p">)</span>
+    <span class="n">data1</span> <span class="o">=</span> <span class="n">bus</span><span class="o">.</span><span class="n">read_byte</span><span class="p">(</span><span class="mh">0x40</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      <p>Convert the data and output it</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>    <span class="n">celsTemp</span> <span class="o">=</span> <span class="p">((</span><span class="n">data0</span> <span class="o">*</span> <span class="mi">256</span> <span class="o">+</span> <span class="n">data1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">175.72</span> <span class="o">/</span> <span class="mf">65536.0</span><span class="p">)</span> <span class="o">-</span> <span class="mf">46.85</span>
+    <span class="n">fahrTemp</span> <span class="o">=</span> <span class="n">celsTemp</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span>
+    
+    <span class="k">return</span> <span class="p">[</span><span class="n">humidity</span><span class="p">,</span><span class="n">celsTemp</span><span class="p">,</span><span class="n">fahrTemp</span><span class="p">]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-7'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-7'>#</a>
+      </div>
+      <p>print &ldquo;Relative Humidity is : %.2f %%&rdquo; %humidity
+print &ldquo;Temperature in Celsius is : %.2f C&rdquo; %celsTemp
+print &ldquo;Temperature in Fahrenheit is : %.2f F&rdquo; %fahrTemp</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>
